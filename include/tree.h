@@ -8,7 +8,7 @@ class PMNode {
  public:
   char value;
   std::vector<PMNode*> children;
-  PMNode(char val) : value(val) {}
+  explicit PMNode(char val) : value(val) {}
   ~PMNode() {
     for (auto child : children)
       delete child;
